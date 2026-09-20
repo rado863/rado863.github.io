@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海鲜粥 - 经典鲜味做法与营养搭配指南</title>
+    <meta name="description" content="海鲜粥大全，提供多种海鲜粥的做法与食谱，包括皮蛋瘦肉粥、鲜虾粥、干贝粥等家常海鲜粥做法，介绍海鲜粥的营养价值及选购技巧。">
+    <meta name="keywords" content="海鲜粥,海鲜粥做法,海鲜粥食谱,皮蛋瘦肉粥,鲜虾粥,干贝粥">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00897b;
+            --primary-dark: #005b4f;
+            --secondary-color: #ff6f00;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .text-center { text-align: center; }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.7)), url('https://picsum.photos/seed/oatmeal/1920/600') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-search {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .hero-search input {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: 30px 0 0 30px;
+            border: none;
+            outline: none;
+        }
+
+        .hero-search button {
+            padding: 0 30px;
+            border-radius: 0 30px 30px 0;
+            border: none;
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Introduction */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .intro-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .intro-img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Categories */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .category-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-img {
+            height: 180px;
+            width: 100%;
+        }
+
+        .category-info {
+            padding: 20px;
+        }
+
+        .category-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .category-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Recipe List */
+        .recipe-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .recipe-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-tag {
+            background-color: #e0f2f1;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            align-self: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .recipe-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .recipe-meta {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            background-color: white;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .tip-item {
+            padding: 20px;
+            background: #f4f6f6;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tip-item h4 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .tip-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            position: relative;
+            padding-right: 40px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+            padding-top: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #eceff1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b0bec5;
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #37474f;
+            padding-top: 20px;
+            text-align: center;
+            color: #78909c;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .recipe-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .tips-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-wrapper { flex-direction: column; height: auto; padding: 15px 0; }
+            nav ul { margin: 15px 0; gap: 15px; flex-wrap: wrap; justify-content: center; }
+            .recipe-list { grid-template-columns: 1fr; }
+            .tips-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 12h20M2 12l5-5m-5 5l5 5"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span>鲜粥食谱</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#recipes">热门做法</a></li>
+                    <li><a href="#tips">选购指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#recipes" class="cta-btn">开始制作</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>海鲜粥</h1>
+                <p>精选优质海鲜，熬制出米香浓郁、鲜味十足的养生粥品。从家常鲜虾粥到滋补干贝粥，掌握好火候，在家也能做出餐厅级美味。</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="搜索海鲜粥做法，如：皮蛋瘦肉粥...">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-content">
+                        <h2>什么是海鲜粥？</h2>
+                        <p>海鲜粥是一种以大米或糯米为基底，加入多种新鲜海鲜（如虾、扇贝、花甲、鱼片等）熬制而成的粥品。海鲜富含优质蛋白质和微量元素，与米粥的软糯相结合，既保留了海鲜的鲜美，又易于消化吸收。</p>
+                        <p>海鲜粥不仅味道鲜美，还具有很高的营养价值，适合各个年龄段的人群食用，尤其在寒冷的天气里，一碗热腾腾的海鲜粥能带来极大的满足感。</p>
+                        <a href="#recipes" style="color: var(--primary-color); font-weight: bold; border-bottom: 2px solid var(--secondary-color);">查看更多食谱 &rarr;</a>
+                    </div>
+                    <img src="https://picsum.photos/seed/porridge/600/400" alt="海鲜粥成品图" class="intro-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="section-padding" style="background-color: #f0f4f8;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见海鲜粥分类</h2>
+                    <p>不同种类的海鲜搭配大米，能创造出风味迥异的粥品</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/shrimp/400/300" alt="鲜虾粥" class="category-img">
+                        <div class="category-info">
+                            <h3>鲜虾粥</h3>
+                            <p>肉质Q弹，鲜味十足，是海鲜粥中最受欢迎的经典口味。</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/crab/400/300" alt="蟹肉粥" class="category-img">
+                        <div class="category-info">
+                            <h3>蟹肉粥</h3>
+                            <p>选用膏蟹或肉蟹，粥底金黄，蟹肉鲜甜，滋补效果佳。</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/clam/400/300" alt="花甲粥" class="category-img">
+                        <div class="category-info">
+                            <h3>花甲粥</h3>
+                            <p>香辣开胃，花甲吸饱了汤汁，是夜宵的绝佳选择。</p>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://picsum.photos/seed/scallop/400/300" alt="干贝粥" class="category-img">
+                        <div class="category-info">
+                            <h3>干贝粥</h3>
+                            <p>鲜味浓郁，营养丰富，口感醇厚，适合注重养生的食客。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipes List -->
+        <section id="recipes" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热门海鲜粥食谱</h2>
+                    <p>精选简单易学的做法，让您轻松掌握海鲜粥的制作技巧</p>
+                </div>
+                <div class="recipe-list">
+                    <!-- Recipe 1 -->
+                    <article class="recipe-card">
+                        <img src="https://picsum.photos/seed/prawn/500/350" alt="鲜虾海鲜粥" class="recipe-img">
+                        <div class="recipe-body">
+                            <span class="recipe-tag">经典</span>
+                            <h3>鲜虾海鲜粥</h3>
+                            <p style="color: #666; margin-bottom: 15px;">大虾、干贝、姜丝、葱花。粥底熬得绵密，海鲜鲜嫩，无需过多调料。</p>
+                            <div class="recipe-meta">
+                                <span>难度：简单</span>
+                                <span>时间：30分钟</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 2 -->
+                    <article class="recipe-card">
+                        <img src="https://picsum.photos/seed/mussels/500/350" alt="干贝香菇粥" class="recipe-img">
+                        <div class="recipe-body">
+                            <span class="recipe-tag">滋补</span>
+                            <h3>干贝香菇粥</h3>
+                            <p style="color: #666; margin-bottom: 15px;">干贝提前泡发，与香菇同煮，鲜味加倍，适合秋冬季节进补。</p>
+                            <div class="recipe-meta">
+                                <span>难度：中等</span>
+                                <span>时间：45分钟</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Recipe 3 -->
+                    <article class="recipe-card">
+                        <img src="https://picsum.photos/seed/salmon/500/350" alt="三文鱼海鲜粥" class="recipe-img">
+                        <div class="recipe-body">
+                            <span class="recipe-tag">营养</span>
+                            <h3>三文鱼海鲜粥</h3>
+                            <p style="color: #666; margin-bottom: 15px;">富含Omega-3脂肪酸，口感细腻，老少皆宜的健康早餐首选。</p>
+                            <div class="recipe-meta">
+                                <span>难度：简单</span>
+                                <span>时间：25分钟</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="section-padding tips-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>海鲜粥选购与制作小贴士</h2>
+                </div>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <span class="tip-icon">🦐</span>
+                        <h4>海鲜新鲜度</h4>
+                        <p>制作海鲜粥，海鲜的新鲜度是关键。选择眼睛明亮、肉质紧实、无异味的海鲜。</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">🍚</span>
+                        <h4>米的选择</h4>
+                        <p>建议使用东北大米或珍珠米，经过长时间熬煮后，米油更丰富，口感更软糯。</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">🔥</span>
+                        <h4>火候控制</h4>
+                        <p>先大火煮开，再转小火慢熬，最后放入海鲜，避免高温破坏海鲜的鲜嫩口感。</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-icon">🧂</span>
+                        <h4>调味技巧</h4>
+                        <p>海鲜本身鲜味足，盐要少放，建议出锅前滴几滴香油和白胡椒粉提味。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-container">
+                    <details>
+                        <summary>海鲜粥可以隔夜吃吗？</summary>
+                        <div class="faq-content">
+                            海鲜粥如果隔夜放置，海鲜中的蛋白质容易滋生细菌，且口感会变差。建议现煮现吃，如果需要保存，请密封冷藏，并在24小时内吃完。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>没有海鲜，可以用什么代替？</summary>
+                        <div class="faq-content">
+                            如果不喜欢海鲜，可以用瘦肉、鸡肉、香菇、玉米、胡萝卜等食材来制作粥，同样美味且营养。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>煮海鲜粥总是有腥味怎么办？</summary>
+                        <div class="faq-content">
+                            去腥的关键在于处理海鲜和调味。处理海鲜时用料酒或姜片腌制；熬粥时加入少许姜丝和米酒；出锅前撒上胡椒粉和葱花即可。
+                        </div>
+                    </details>
+                    <details>
+                        <summary>海鲜粥适合什么人群食用？</summary>
+                        <div class="faq-content">
+                            海鲜粥富含蛋白质，适合体虚乏力、营养不良的人群。但海鲜过敏者、痛风急性期患者以及脾胃虚寒者应慎食。
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>鲜粥食谱</h4>
+                    <p style="color: #b0bec5; font-size: 0.9rem; line-height: 1.8;">
+                        专注于分享各类海鲜粥、肉粥的烹饪技巧与食谱。致力于让每一位用户都能轻松在家做出营养丰富、美味可口的粥品。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#recipes">热门食谱</a></li>
+                        <li><a href="#tips">选购指南</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">鲜虾粥</a></li>
+                        <li><a href="#">干贝粥</a></li>
+                        <li><a href="#">皮蛋瘦肉粥</a></li>
+                        <li><a href="#">海鲜粥</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 鲜粥食谱网. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                      </html>
