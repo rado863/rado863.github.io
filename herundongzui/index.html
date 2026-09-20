@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="何润东最新电视剧全集在线观看，包含《武动乾坤》、《巨浪》等经典作品及演员介绍、剧情简介、角色解析和播出平台查询。">
+    <meta name="keywords" content="何润东最新电视剧,何润东作品,武动乾坤,巨浪,演员何润东">
+    <title>何润东最新电视剧-经典影视作品全集与角色解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-light: #f9f9f9;
+            --text-dark: #333;
+            --text-gray: #666;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        /* Works Grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: var(--white);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .platforms span {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.7rem;
+            color: #666;
+        }
+
+        .btn {
+            padding: 0.5rem 1.2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+        }
+
+        /* Character Section */
+        .character-section {
+            background-color: var(--white);
+        }
+
+        .character-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .character-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .character-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .character-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .character-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .character-info p {
+            margin-bottom: 1rem;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .info-list {
+            margin-top: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-label {
+            font-weight: bold;
+            width: 80px;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">影视<span>档案</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#works">作品全集</a></li>
+                    <li><a href="#character">角色解析</a></li>
+                    <li><a href="#guide">观看指南</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索何润东的荧幕魅力</h1>
+                <p>从硬汉角色到深情演绎，回顾何润东最新电视剧及经典代表作，深度解析其演艺生涯与角色塑造。</p>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="container">
+            <h2 class="section-title">最新电视剧与代表作</h2>
+            <div class="works-grid">
+                
+                <!-- Work Card 1 -->
+                <article class="work-card">
+                    <div class="card-image">
+                        <span class="card-badge">热门</span>
+                        <!-- Placeholder image with seed for consistency -->
+                        <img src="https://picsum.photos/seed/hyd1/400/300" alt="武动乾坤剧照">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">武动乾坤</h3>
+                        <div class="card-meta">古装 / 奇幻 / 动作 | 2019</div>
+                        <p class="card-desc">饰演林琅天，何润东在剧中展现了霸气侧漏的宗师风范，与男主角的对手戏张力十足。</p>
+                        <div class="card-footer">
+                            <div class="platforms">
+                                <span>优</span><span>腾</span><span>爱</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work Card 2 -->
+                <article class="work-card">
+                    <div class="card-image">
+                        <span class="card-badge">经典</span>
+                        <img src="https://picsum.photos/seed/hyd2/400/300" alt="巨浪剧照">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">巨浪</h3>
+                        <div class="card-meta">年代 / 军旅 / 剧情 | 2015</div>
+                        <p class="card-desc">饰演雷立行，一个铁骨铮铮的海军军官。该剧真实再现了海军从无到有的发展历程。</p>
+                        <div class="card-footer">
+                            <div class="platforms">
+                                <span>爱</span><span>优</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work Card 3 -->
+                <article class="work-card">
+                    <div class="card-image">
+                        <span class="card-badge">推荐</span>
+                        <img src="https://picsum.photos/seed/hyd3/400/300" alt="那年花开月正圆剧照">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">那年花开月正圆</h3>
+                        <div class="card-meta">历史 / 商战 / 爱情 | 2017</div>
+                        <p class="card-desc">饰演吴蔚文，何润东将晚清商人的隐忍与智慧演绎得淋漓尽致，是全剧的重要支柱。</p>
+                        <div class="card-footer">
+                            <div class="platforms">
+                                <span>爱</span><span>腾</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work Card 4 -->
+                <article class="work-card">
+                    <div class="card-image">
+                        <span class="card-badge">悬疑</span>
+                        <img src="https://picsum.photos/seed/hyd4/400/300" alt="黎明前的暗战剧照">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">黎明前的暗战</h3>
+                        <div class="card-meta">谍战 / 悬疑 / 历史 | 2014</div>
+                        <p class="card-desc">饰演罗立群，潜伏在国民党内部的共产党特工，剧情紧张刺激，人物刻画入木三分。</p>
+                        <div class="card-footer">
+                            <div class="platforms">
+                                <span>爱</span><span>优</span><span>腾</span>
+                            </div>
+                            <a href="#" class="btn btn-primary">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Character Analysis Section -->
+        <section id="character" class="character-section">
+            <div class="container">
+                <h2 class="section-title">角色解析：硬汉与深情的切换</h2>
+                <div class="character-container">
+                    <div class="character-image">
+                        <img src="https://picsum.photos/seed/hyd_char/600/400" alt="何润东角色形象">
+                    </div>
+                    <div class="character-info">
+                        <h2>何润东的演技突破</h2>
+                        <p>作为资深演员，何润东在电视剧领域的表现一直备受关注。不同于早期的偶像剧形象，他在近年的作品中更倾向于挑战复杂、多面的角色。</p>
+                        <p>在《巨浪》中，他成功塑造了军人形象，展现了坚毅果敢的一面；而在《那年花开月正圆》中，他又化身为沉稳内敛的商人，将家族责任与个人情感处理得恰到好处。何润东善于通过细微的表情变化和肢体语言，赋予角色生命力。</p>
+                        
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label">出生日期：</span>
+                                <span>1975年9月13日</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">代表角色：</span>
+                                <span>林琅天、雷立行、吴蔚文</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">演艺经历：</span>
+                                <span>始于歌手，转型演员，深耕影视多年</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="container">
+            <h2 class="section-title">观看指南与常见问题</h2>
+            <article style="background: #fff; padding: 2rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                <h3>在哪里可以观看何润东的最新电视剧？</h3>
+                <p>何润东的大部分经典电视剧如《巨浪》、《那年花开月正圆》、《武动乾坤》等均可在爱奇艺、腾讯视频、优酷等主流视频平台找到正版资源。部分早期作品可能在电视台的回放频道或部分流媒体平台上线。建议关注各大视频平台的“何润东”专题页。</p>
+                <br>
+                <h3>他的下一部电视剧作品是什么？</h3>
+                <p>关于何润东的最新动态，建议关注其官方社交媒体账号或权威娱乐资讯网站。演艺工作通常具有周期性，具体播出信息请以官方发布的最新通告为准。</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>影视档案致力于提供最全的电视剧资讯、角色解析和观看指南。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">最新上映</a></li>
+                        <li><a href="#">经典回顾</a></li>
+                        <li><a href="#">演员库</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门标签</h4>
+                    <ul>
+                        <li><a href="#">何润东电视剧</a></li>
+                        <li><a href="#">武动乾坤</a></li>
+                        <li><a href="#">巨浪</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 影视档案. All Rights Reserved. 本站内容仅供学习交流使用，版权归原作者所有。
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
