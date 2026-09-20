@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="冒险岛Online辅助工具下载与安全使用指南。提供稳定的脚本工具、挂机辅助及游戏机制解析，帮助玩家提升效率，同时强调账号安全与防封注意事项。">
+    <meta name="keywords" content="冒险岛online外挂,冒险岛脚本,冒险岛挂机,冒险岛辅助工具,冒险岛自动打怪,冒险岛脚本下载">
+    <title>冒险岛online外挂-安全辅助工具与效率提升方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ffcc00;
+            --primary-hover: #e6b800;
+            --secondary-color: #00a8ff;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-main: #ffffff;
+            --text-muted: #aaaaaa;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-download {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+        }
+
+        .btn-download:hover {
+            background-color: #0097e6;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,168,255,0.1) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 12px 30px;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            padding: 10px 28px;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(0, 168, 255, 0.1);
+        }
+
+        /* Features */
+        .section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Tools List */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .tool-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .tool-img {
+            width: 100%;
+            height: 200px;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 3rem;
+        }
+
+        .tool-content {
+            padding: 20px;
+        }
+
+        .tool-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            background: rgba(255, 204, 0, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .tool-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .tool-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .version {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Safety Notice */
+        .safety-box {
+            background: linear-gradient(45deg, #2c0e0e, #1e1e1e);
+            border-left: 5px solid #ff4757;
+            padding: 30px;
+            margin: 50px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .safety-box h2 {
+            color: #ff4757;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .safety-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: #ddd;
+        }
+
+        .safety-list li::before {
+            content: '⚠';
+            position: absolute;
+            left: 0;
+            color: #ff4757;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+
+            .header-content {
+                justify-content: center;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>Maple</span>Helper
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#features">功能介绍</a></li>
+                    <li><a href="#tools">工具下载</a></li>
+                    <li><a href="#guide">使用指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#tools" class="btn-download">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>冒险岛Online 外挂与辅助工具</h1>
+                <p>专为冒险岛玩家打造的效率提升方案。提供稳定的自动打怪、脚本挂机及任务辅助功能，助您轻松升级，告别枯燥刷怪。</p>
+                <div class="hero-actions">
+                    <a href="#tools" class="btn-primary">查看工具列表</a>
+                    <a href="#guide" class="btn-outline">阅读安全指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">核心功能特性</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>智能防封机制</h3>
+                        <p>内置动态IP切换与操作模拟算法，有效降低检测风险，保障账号长期安全运行。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>高效自动挂机</h3>
+                        <p>支持多地图定点刷怪、自动拾取、自动回城补给，解放双手，让角色24小时在线。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>精准任务脚本</h3>
+                        <p>内置主流任务流程脚本，自动完成跑图、打怪、收集物品等繁琐日常任务。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section" style="background-color: #181818;">
+            <div class="container">
+                <h2 class="section-title">热门辅助工具</h2>
+                <div class="tools-grid">
+                    <!-- Tool 1 -->
+                    <div class="tool-card">
+                        <div class="tool-img">🏝️</div>
+                        <div class="tool-content">
+                            <span class="tool-tag">挂机必备</span>
+                            <h3>冒险岛全自动挂机宝</h3>
+                            <p>支持全职业通用，具备智能走位与技能释放判定，适合长时间离线挂机。</p>
+                            <div class="tool-footer">
+                                <span class="version">版本: v3.2.1</span>
+                                <a href="#" class="btn-download" style="font-size: 0.9rem; padding: 5px 15px;">下载</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool 2 -->
+                    <div class="tool-card">
+                        <div class="tool-img">📜</div>
+                        <div class="tool-content">
+                            <span class="tool-tag">任务辅助</span>
+                            <h3>冒险岛任务速通助手</h3>
+                            <p>一键解析任务流程，自动寻找NPC与目标怪物，大幅缩短任务耗时。</p>
+                            <div class="tool-footer">
+                                <span class="version">版本: v2.8.5</span>
+                                <a href="#" class="btn-download" style="font-size: 0.9rem; padding: 5px 15px;">下载</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tool 3 -->
+                    <div class="tool-card">
+                        <div class="tool-img">💎</div>
+                        <div class="tool-content">
+                            <span class="tool-tag">资源管理</span>
+                            <h3>背包自动整理工具</h3>
+                            <p>自动分类整理装备、药水与材料，支持自定义规则，告别背包杂乱。</p>
+                            <div class="tool-footer">
+                                <span class="version">版本: v1.5.0</span>
+                                <a href="#" class="btn-download" style="font-size: 0.9rem; padding: 5px 15px;">下载</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Notice -->
+        <section class="container">
+            <div class="safety-box">
+                <h2>⚠️ 使用风险与安全须知</h2>
+                <p style="margin-bottom: 15px; color: #ddd;">虽然辅助工具能提升效率，但使用外挂存在一定风险。请务必阅读以下注意事项：</p>
+                <ul class="safety-list">
+                    <li><strong>账号安全：</strong> 任何第三方软件都存在被植入木马或窃取密码的风险，请勿在工具内输入账号密码。</li>
+                    <li><strong>封号风险：</strong> 官方反外挂系统持续更新，使用高风险脚本可能导致永久封号，请谨慎选择工具。</li>
+                    <li><strong>法律风险：</strong> 在未获得官方授权的情况下使用修改游戏数据的程序可能违反服务条款。</li>
+                    <li><strong>兼容性：</strong> 使用前请确认游戏版本与工具版本匹配，避免因版本不兼容导致崩溃。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+                <div class="features-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="faq-item">
+                        <div class="faq-question">工具会占用大量电脑资源吗？</div>
+                        <div class="faq-answer">我们的工具采用轻量化设计，在保证功能正常运行的同时，尽量降低CPU和内存占用，不影响游戏流畅度。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">支持哪些版本的冒险岛？</div>
+                        <div class="faq-answer">目前主要支持最新正式服版本，部分工具支持经典服，具体请查看对应工具的版本说明。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何获取技术支持？</div>
+                        <div class="faq-answer">如遇到使用问题，请在页面下方提交反馈，或加入我们的官方交流群获取帮助。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">工具是免费的吗？</div>
+                        <div class="faq-answer">我们提供部分免费基础功能，高级功能需要订阅或购买激活码，具体请参考产品介绍。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        <span>Maple</span>Helper
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        专注提供冒险岛Online游戏辅助工具与策略分享，致力于为玩家提供更好的游戏体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">工具下载</a></li>
+                        <li><a href="#">使用教程</a></li>
+                        <li><a href="#">版本更新</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">冒险岛Wiki</a></li>
+                        <li><a href="#">官方公告</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">配置要求</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">提交反馈</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">举报侵权</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 MapleHelper. All Rights Reserved. 本站内容仅供学习交流使用，请勿用于非法用途。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
