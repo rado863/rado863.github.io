@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="演员阳光官方网站，汇集演员阳光的个人简介、演艺经历、影视作品展示及粉丝互动平台。提供最新动态、经典剧照及访谈内容。">
+    <meta name="keywords" content="演员阳光,演员阳光简介,演员阳光作品,演员阳光写真,演员阳光访谈">
+    <title>演员阳光-影视作品展示与个人资料平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff9800;
+            --secondary-color: #2c3e50;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/seed/actor_sunny_hero/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+            transform: translateY(-2px);
+        }
+
+        /* Profile Section */
+        .profile-section {
+            padding: 4rem 0;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-img-wrapper {
+            position: relative;
+        }
+
+        .profile-img-wrapper img {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .profile-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .info-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-item span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .bio-text {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background-color: #fff3e0;
+            color: var(--primary-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Works Section */
+        .works-section {
+            background-color: white;
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--bg-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .work-poster {
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        .work-poster img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .work-year {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .work-info {
+            padding: 1.5rem;
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .work-role {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .work-type {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            color: var(--text-light);
+        }
+
+        /* News Section */
+        .news-section {
+            padding: 4rem 0;
+        }
+
+        .news-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-date {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+
+        .news-date .day {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .news-date .month {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .news-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-content h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .news-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-link {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .hot-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .hot-list a {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .hot-list a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col p {
+            color: #aaa;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-wrapper nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .info-list {
+                grid-template-columns: 1fr;
+            }
+
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>☀</span> 演员阳光
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#profile">个人简介</a></li>
+                    <li><a href="#works">影视作品</a></li>
+                    <li><a href="#news">最新动态</a></li>
+                    <li><a href="#gallery">剧照写真</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>演员阳光</h1>
+                <p>用真诚演绎角色，用热情拥抱生活。探索演员阳光的演艺世界与幕后故事。</p>
+                <a href="#works" class="btn">查看作品</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="profile-section container">
+            <div class="profile-grid">
+                <div class="profile-img-wrapper">
+                    <img src="https://picsum.photos/seed/actor_sunny_face/400/500.jpg" alt="演员阳光写真">
+                </div>
+                <div class="profile-info">
+                    <h2>关于我</h2>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <strong>姓名</strong>
+                            <span>阳光</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>出生地</strong>
+                            <span>中国·北京</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>出生日期</strong>
+                            <span>1990年5月20日</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>星座</strong>
+                            <span>金牛座</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>毕业院校</strong>
+                            <span>中央戏剧学院</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>经纪公司</strong>
+                            <span>星辉娱乐</span>
+                        </div>
+                    </div>
+                    <p class="bio-text">
+                        演员阳光，毕业于中央戏剧学院表演系。自2012年出道以来，凭借清新自然的演技风格和阳光开朗的性格，在影视圈崭露头角。擅长饰演贴近生活、充满正能量的角色。在多部热播剧中都有精彩表现，深受观众喜爱。
+                    </p>
+                    <div class="tags">
+                        <span class="tag">演技派</span>
+                        <span class="tag">偶像实力派</span>
+                        <span class="tag">电视剧演员</span>
+                        <span class="tag">电影演员</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="works-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>影视作品</h2>
+                    <p>精选代表作与近期作品展示</p>
+                </div>
+                <div class="works-grid">
+                    <!-- Work 1 -->
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <img src="https://picsum.photos/seed/work1/400/600.jpg" alt="电视剧海报">
+                            <span class="work-year">2023</span>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">《追光者》</h3>
+                            <p class="work-role">饰演：林晨</p>
+                            <span class="work-type">都市励志 / 爱情</span>
+                        </div>
+                    </article>
+
+                    <!-- Work 2 -->
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <img src="https://picsum.photos/seed/work2/400/600.jpg" alt="电影海报">
+                            <span class="work-year">2022</span>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">《逆流而上的你》</h3>
+                            <p class="work-role">饰演：张伟</p>
+                            <span class="work-type">剧情 / 冒险</span>
+                        </div>
+                    </article>
+
+                    <!-- Work 3 -->
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <img src="https://picsum.photos/seed/work3/400/600.jpg" alt="电视剧海报">
+                            <span class="work-year">2021</span>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">《阳光下的少年》</h3>
+                            <p class="work-role">饰演：赵阳</p>
+                            <span class="work-type">青春 / 校园</span>
+                        </div>
+                    </article>
+
+                    <!-- Work 4 -->
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <img src="https://picsum.photos/seed/work4/400/600.jpg" alt="电影海报">
+                            <span class="work-year">2020</span>
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">《城市之光》</h3>
+                            <p class="work-role">饰演：配角</p>
+                            <span class="work-type">悬疑 / 惊悚</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Sidebar Section -->
+        <section id="news" class="news-section container">
+            <div class="news-container">
+                <div class="news-list">
+                    <h2>最新动态</h2>
+                    
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-content">
+                            <h3><a href="#">新剧《追光者》杀青，演员阳光感谢剧组陪伴</a></h3>
+                            <p class="news-excerpt">经过三个月的紧张拍摄，演员阳光主演的新剧《追光者》正式宣布杀青。他在剧中饰演的林晨一角深入人心，引发了观众的热烈讨论。</p>
+                            <a href="#" class="news-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">02</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-content">
+                            <h3><a href="#">演员阳光受邀出席第XX届国际电影节红毯</a></h3>
+                            <p class="news-excerpt">近日，演员阳光身着一袭剪裁得体的西装亮相电影节红毯，展现成熟稳重的魅力，并接受了多家国际媒体的独家专访。</p>
+                            <a href="#" class="news-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <div class="news-date">
+                            <span class="day">28</span>
+                            <span class="month">09月</span>
+                        </div>
+                        <div class="news-content">
+                            <h3><a href="#">公益项目启动：演员阳光倡导关注乡村教育</a></h3>
+                            <p class="news-excerpt">演员阳光正式宣布启动个人公益项目，旨在为偏远地区的孩子们捐赠图书和学习用品，用实际行动传递正能量。</p>
+                            <a href="#" class="news-link">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside class="sidebar">
+                    <h3>热门关注</h3>
+                    <ul class="hot-list">
+                        <li><a href="#">演员阳光：从配角到主角的蜕变之路</a></li>
+                        <li><a href="#">独家专访：阳光眼中的好剧本标准</a></li>
+                        <li><a href="#">《追光者》预告片发布，高能剧情抢先看</a></li>
+                        <li><a href="#">演员阳光写真大片曝光，尽显温柔一面</a></li>
+                        <li><a href="#">粉丝见面会圆满落幕，阳光与粉丝互动满满</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Gallery / Interact Section -->
+        <section id="gallery" class="container" style="padding: 4rem 1rem; text-align: center;">
+            <div class="section-header">
+                <h2>剧照写真</h2>
+                <p>捕捉光影瞬间，记录角色灵魂</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; max-width: 1000px; margin: 0 auto;">
+                <img src="https://picsum.photos/seed/gal1/300/400.jpg" style="height: 300px; width: 100%; border-radius: 8px;" alt="剧照1">
+                <img src="https://picsum.photos/seed/gal2/300/400.jpg" style="height: 300px; width: 100%; border-radius: 8px;" alt="剧照2">
+                <img src="https://picsum.photos/seed/gal3/300/400.jpg" style="height: 300px; width: 100%; border-radius: 8px;" alt="剧照3">
+                <img src="https://picsum.photos/seed/gal4/300/400.jpg" style="height: 300px; width: 100%; border-radius: 8px;" alt="剧照4">
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: white; margin-bottom: 1rem;">
+                        <span style="color: var(--primary-color);">☀</span> 演员阳光
+                    </div>
+                    <p>专注影视表演，致力于为观众呈现最真实、最感人的角色形象。欢迎关注官方动态。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#profile">个人简介</a></li>
+                        <li><a href="#works">影视作品</a></li>
+                        <li><a href="#news">最新动态</a></li>
+                        <li><a href="#gallery">剧照写真</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">经纪公司官网</a></li>
+                        <li><a href="#">影视资料库</a></li>
+                        <li><a href="#">粉丝后援会</a></li>
+                        <li><a href="#">媒体报道中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">媒体采访</a></li>
+                        <li><a href="#">粉丝信箱</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 演员阳光官方网站. All Rights Reserved. 本网站为演示设计，不涉及真实人物。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    const nav = document.querySelector('nav');
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
